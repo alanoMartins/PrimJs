@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <title>Prim exec</title>
+</head>
+
+    <body>
+        <div>
+            <button id="clickButton">Execute</button>
+        </div>
+        <div id="result">
+        </div>
+        <script type="text/javascript" src="Grafo.js"> </script>
+        <script type="text/javascript" src="Prim.js"> </script>
+        <script>
+            const myButton = document.getElementById("clickButton");
+            const results = document.getElementById("result");
+
+            myButton.addEventListener('click', doPrim, true)
+
+            function doPrim() {
+                results.innerText = "";
+                results.append(Prim.execute());
+            }
+        </script>
+
+    </body>
+</html>
